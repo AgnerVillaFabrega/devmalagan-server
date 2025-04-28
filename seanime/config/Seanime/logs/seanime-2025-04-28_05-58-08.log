@@ -1,0 +1,85 @@
+2025-04-28 05:58:08 |INF| app > Seanime 2.8.3-Hachi
+2025-04-28 05:58:08 |INF| app > OS: linux
+2025-04-28 05:58:08 |INF| app > Arch: amd64
+2025-04-28 05:58:08 |INF| app > Processor count: 12
+2025-04-28 05:58:08 |DBG| app > Initializing config
+2025-04-28 05:58:08 |TRC| app > Overriding default data directory dataDir=/config/Seanime
+2025-04-28 05:58:08 |INF| app > Version change detected current=2.8.3 prev=
+2025-04-28 05:58:08 |INF| app > Data directory: /config/Seanime
+2025-04-28 05:58:08 |INF| app > Working directory: /app
+2025-04-28 05:58:08 |INF| db > Database instantiated name=seanime.db
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in manga provider extension id=comick
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=comick
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in manga provider extension id=comick-multi
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=comick-multi
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in manga provider extension id=mangapill
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=mangapill
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in manga provider extension id=weebcentral
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=weebcentral
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in manga provider extension id=mangadex
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=mangadex
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in manga provider extension id=manganato
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=manganato
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |TRC| goja runtime > Pre-warming pool size=5
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in onlinestream provider extension id=animepahe
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=animepahe
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in anime torrent provider extension id=nyaa
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=nyaa
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in anime torrent provider extension id=nyaa-non-eng
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=nyaa-non-eng
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in anime torrent provider extension id=nyaa-sukebei
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=nyaa-sukebei
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in anime torrent provider extension id=animetosho
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=animetosho
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in anime torrent provider extension id=seadex
+2025-04-28 05:58:08 |DBG| extensions > Loaded built-in extension id=seadex
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |TRC| extensions > Loading external extensions
+2025-04-28 05:58:08 |TRC| extensions > Interrupting Goja VMs
+2025-04-28 05:58:08 |DBG| extensions > Killed Goja VMs count=0
+2025-04-28 05:58:08 |TRC| extensions > Unloading external extensions
+2025-04-28 05:58:08 |DBG| extensions > Unloaded external extensions count=0
+2025-04-28 05:58:08 |DBG| extensions > Loaded external extensions
+2025-04-28 05:58:08 |TRC| ws > Sending message type=extensions-reloaded
+2025-04-28 05:58:08 |TRC| extensions > Checking for updates
+2025-04-28 05:58:08 |DBG| extensions > Retrieved update info haveUpdates=0
+2025-04-28 05:58:08 |INF| local platform > Database instantiated name=local.db
+2025-04-28 05:58:08 |INF| continuity > Initialized manager
+2025-04-28 05:58:08 |ERR| app > Failed to parse previous version error="Invalid Semantic Version"
+2025-04-28 05:58:08 |DBG| app > Refreshing modules
+2025-04-28 05:58:08 |DBG| manga downloader > Reading download directory
+2025-04-28 05:58:08 |TRC| ws > Sending message type=refreshed-manga-download-data
+2025-04-28 05:58:08 |WRN| app > Did not initialize media player module, no settings found
+2025-04-28 05:58:08 |WRN| app > Did not initialize torrent client module, no settings found
+2025-04-28 05:58:08 |INF| app > Refreshed modules
+2025-04-28 05:58:08 |DBG| manga > Initialized provider extension bank
+2025-04-28 05:58:08 |DBG| onlinestream > Initialized provider extension bank
+2025-04-28 05:58:08 |DBG| torrent repo > Initialized anime provider extension bank
+2025-04-28 05:58:08 |DBG| app > Fetching Anilist data
+2025-04-28 05:58:08 |DBG| db > Media streaming settings saved
+2025-04-28 05:58:08 |INF| mediastream > Module initialized
+2025-04-28 05:58:08 |DBG| db > Torrent streaming settings saved
+2025-04-28 05:58:08 |INF| torrentstream > Module is disabled
+2025-04-28 05:58:08 |DBG| db > Debrid settings saved
+2025-04-28 05:58:08 |INF| app > Manga downloads path: /config/Seanime/manga
+2025-04-28 05:58:08 |INF| app > Offline assets path: /config/Seanime/offline/assets
+2025-04-28 05:58:08 |INF| app > Server Address: 0.0.0.0:8080
+2025-04-28 05:58:09 |INF| app > Seanime started at :8080
+2025-04-28 05:58:09 |DBG| animetosho > Loaded Sneedex Nyaa IDs count=1446
+2025-04-28 05:58:09 |DBG| ws > Client connected id=36417605-fe9b-47ed-a7d1-019785ac3dd5
+2025-04-28 05:58:13 |DBG| ws > Client disconnection id=36417605-fe9b-47ed-a7d1-019785ac3dd5
+2025-04-28 05:58:14 |DBG| ws > Client connected id=36417605-fe9b-47ed-a7d1-019785ac3dd5
+2025-04-28 05:58:14 |TRC| method=GET status=200 uri=/api/v1/status latency_human=6.187322ms
+2025-04-28 05:58:18 |DBG| ws > Client disconnection id=36417605-fe9b-47ed-a7d1-019785ac3dd5
+2025-04-28 06:01:49 |TRC| Received signal > terminated
