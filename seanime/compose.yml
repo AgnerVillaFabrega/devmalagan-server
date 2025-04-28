@@ -3,11 +3,10 @@ services:
     image: coyann/seanime
     container_name: seanime
     ports:
-      - "3001:8080"      # Seanime UI
-      - "3002:8081"      # qBittorrent UI
-      - "6881:6881/tcp"  # Bittorrent TCP
-      - "6881:6881/udp"  # Bittorrent UDP (trackers, DHT)
+      - "3001:8080" # Seanime web interface
+      - "3002:8081" # qBittorrent web interface
     volumes:
-      - ./data:/data
-      - ./config:/config
-    restart: unless-stopped
+      - ./data:/data # Bind mount for downloads and media files
+      # IMPORTANT: Copy the .docker/config directory from the repo to your host before using this bind mount.
+      - ./config:/config # Bind mount for configuration files
+    restart: always
