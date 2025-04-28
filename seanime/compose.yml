@@ -3,8 +3,8 @@ services:
     image: coyann/seanime
     container_name: seanime
     ports:
-      - "3001:8080" # Seanime web interface
-      - "3002:8081" # qBittorrent web interface
+      - "8080:8080" # Seanime web interface
+      - "8080:8081" # qBittorrent web interface
     volumes:
       - ./data:/data # Bind mount for downloads and media files
       # IMPORTANT: Copy the .docker/config directory from the repo to your host before using this bind mount.
