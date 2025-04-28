@@ -1,0 +1,21 @@
+version: "3"
+services:
+  pihole:
+    image: pihole/pihole:latest
+    container_name: pihole
+    hostname: pihole
+    domainname: lan                # Opcional: tu dominio local
+    restart: unless-stopped
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80"
+    environment:
+      TZ: "America/Bogota"        # Ajusta a tu zona horaria
+      WEBPASSWORD: "l>/23lAS#@l12]'{[1]"   # Cambia por una contraseña segura
+      DNS1: 1.1.1.1               # DNS upstream 1
+      DNS2: 8.8.8.8               # DNS upstream 2
+    volumes:
+      - "./etc-pihole/:/etc/pihole/"
+      - "./etc-dnsmasq.d/:/etc/dnsmasq.d/"
+    # network_mode: "host"        # Alternativa: usa host networking para evitar problemas de DHCP :contentReference[oaicite:1]{index=1}
