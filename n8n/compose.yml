@@ -38,6 +38,7 @@ services:
       - N8N_VERSION_NOTIFICATIONS_ENABLED=true
       - EXECUTIONS_DATA_PRUNE=true
       - EXECUTIONS_DATA_MAX_AGE=168  # Mantener ejecuciones por 7 días
+      - N8N_SECURE_COOKIE=false  # Desactivar cookies seguras para acceso local
       
     volumes:
       - n8n_data:/home/node/.n8n
