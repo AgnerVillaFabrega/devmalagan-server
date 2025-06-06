@@ -1,11 +1,13 @@
+version: '3.8'
+
 services:
   postgres:
     image: postgres:17-alpine
-    container_name: homelab_postgres
+    container_name: devmalagan_postgres
     restart: unless-stopped
     
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-homelab}
+      POSTGRES_DB: ${POSTGRES_DB:-devmalagan}
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       PGDATA: /var/lib/postgresql/data/pgdata
@@ -15,12 +17,9 @@ services:
       
     volumes:
       - postgres_data:/var/lib/postgresql/data/pgdata
-      - ./init-scripts:/docker-entrypoint-initdb.d
-      - ./postgres-homelab.conf:/etc/postgresql/postgresql.conf:ro
+      - ./postgres.conf:/etc/postgresql/postgresql.conf:ro
       
-    command: >
-      postgres 
-      -c config_file=/etc/postgresql/postgresql.conf
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
       
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
@@ -29,10 +28,6 @@ services:
       retries: 3
       start_period: 30s
       
-    networks:
-      - homelab_network
-      
-    # Recursos limitados para home lab
     deploy:
       resources:
         limits:
@@ -42,43 +37,6 @@ services:
           memory: 128M
           cpus: '0.1'
 
-  # pgAdmin lightweight - solo si lo necesitas
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    container_name: homelab_pgadmin
-    restart: unless-stopped
-    profiles: ["admin"] # Solo se levanta con --profile admin
-    
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@homelab.local}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: 'False'
-      
-    ports:
-      - "${PGADMIN_PORT:-8080}:80"
-      
-    volumes:
-      - pgadmin_data:/var/lib/pgladmin
-      
-    depends_on:
-      postgres:
-        condition: service_healthy
-        
-    networks:
-      - homelab_network
-
 volumes:
   postgres_data:
     driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${DATA_PATH:-./postgres-data}
-  pgadmin_data:
-    driver: local
-
-networks:
-  homelab_network:
-    name: homelab_postgres
-    driver: bridge
