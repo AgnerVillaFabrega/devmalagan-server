@@ -75,7 +75,7 @@ docker ps
 ```
 
 ### **4️⃣ Configurar Nginx Proxy Manager**
-1. Accede a **http://192.168.101.100:81**.
+1. Accede a **http://192.168.1.200:81**.
 2. Inicia sesión con:
    - Usuario: `admin@example.com`
    - Contraseña: `changeme`
@@ -85,7 +85,7 @@ docker ps
 1. Ve a **Proxy Hosts** y haz clic en **Add Proxy Host**.
 2. Configura:
    - **Domain Names**: `proyecto1.midominio.com`
-   - **Forward Hostname/IP**: `192.168.101.100`
+   - **Forward Hostname/IP**: `192.168.1.200`
    - **Forward Port**: `8001`
    - Activa **"Websockets Support"** y **"Force SSL"**.
 3. Guarda y repite para cada proyecto (`proyecto2`, `proyecto3`, etc.).
@@ -111,7 +111,7 @@ services:
 ### **2️⃣ Configurar en Nginx Proxy Manager**
 1. Agregar un nuevo **Proxy Host** con:
    - **Domain Name**: `proyecto4.midominio.com`
-   - **Forward Hostname/IP**: `192.168.101.100`
+   - **Forward Hostname/IP**: `192.168.1.200`
    - **Forward Port**: `8004`
    - Habilitar SSL y WebSockets.
 
