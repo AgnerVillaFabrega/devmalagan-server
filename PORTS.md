@@ -16,3 +16,4 @@
 |-----------------------|-----------------------|-------------|
 | nginx-proxy-manager   | Reverse Proxy Manager | 80, 81, 443 |
 | cloudflared-tunnel    | Cloudflare Tunnel     | interno     |
+| dozzle                | Monitor de contenedores | 2001        |

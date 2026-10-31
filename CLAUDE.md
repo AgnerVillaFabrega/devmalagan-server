@@ -7,6 +7,7 @@ Repositorio de infraestructura del homelab **devmalagan**. Es la fuente de la ve
 | Carpeta | Archivo compose | Servicios | Puertos host |
 |---|---|---|---|
 | `npm-cloudflare/` | `compose.yml` | `nginx-proxy-manager`, `cloudflared-tunnel` | 80, 81 (UI NPM), 443 |
+| `monitoring/` | `compose.yml` | `dozzle` (logs + CPU/RAM en vivo de contenedores, login propio) | 2001 |
 
 Otros archivos:
 - `PORTS.md` — esquema de rangos de puertos y contenedores actuales.
@@ -45,6 +46,7 @@ docker compose pull && docker compose up -d && docker image prune -f   # actuali
 - `.env` y `CLAUDE.local.md` están en `.gitignore`. Solo se commitea `.env.template`. Nunca commitear tokens ni contraseñas.
 - `npm-cloudflare/.env`: `CLOUDFLARED_TOKEN`.
 - Datos de NPM (config, proxy hosts en `database.sqlite`, certificados) en `npm-cloudflare/data/`, ignorado por git.
+- Login de Dozzle en `monitoring/data/users.yml` (ignorado). Regenerar con `docker run --rm amir20/dozzle generate --name <nombre> --email <email> --password <pass> <usuario> > monitoring/data/users.yml`.
 
 ## Convenciones
 

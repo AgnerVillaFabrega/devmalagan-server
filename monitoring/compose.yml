@@ -1,0 +1,23 @@
+services:
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    restart: unless-stopped
+    ports:
+      - "2001:8080"  # UI de Dozzle
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./data:/data  # users.yml con el login (no se commitea)
+    environment:
+      - DOZZLE_AUTH_PROVIDER=simple
+      - DOZZLE_HOSTNAME=devmalagan
+      - DOZZLE_NO_ANALYTICS=true
+    healthcheck:
+      test: ["CMD", "/dozzle", "healthcheck"]
+      interval: 60s
+      timeout: 5s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          memory: 128M
